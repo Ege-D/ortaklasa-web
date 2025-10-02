@@ -16,9 +16,6 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f8d6d6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         /* Header Styles */
@@ -33,9 +30,9 @@
 
         .header-image {
             max-width: 1920px;
-            width: auto;
+            width: 100%;
             height: auto;
-            max-height: 100px;
+            max-height: 150px;
             object-fit: contain;
             display: block;
         }
@@ -43,12 +40,8 @@
         /* Main Content Area */
         .main-content {
             max-width: 1200px;
-            margin: auto;
+            margin: 40px auto;
             padding: 20px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         /* Image Container */
@@ -57,14 +50,20 @@
             margin-bottom: 30px;
         }
 
+        /* DESKTOP - Default image size */
         .clickable-image {
             width: auto;
-            max-width: 500px;
-            max-height: 700px;
+            max-width: 700px;
+            max-height: 900px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /*cursor: pointer;*/
         }
+
+        /*.clickable-image:hover {
+            transform: scale(1.02);
+        }*/
 
         /* Social Media Buttons */
         .social-buttons {
@@ -104,7 +103,7 @@
             background-color: #000000;
         }
 
-        /* Mobile Responsive Styles */
+        /* TABLET - Medium screens */
         @media (max-width: 768px) {
             .main-content {
                 margin: 20px auto;
@@ -113,17 +112,15 @@
 
             .header-image {
                 max-height: 80px;
-                object-fit: contain;
             }
 
             .clickable-image {
                 max-width: 90%;
-                max-height: 500px;
+                max-height: 600px;
             }
 
             .social-buttons {
                 gap: 15px;
-                margin-top: 20px;
             }
 
             .social-btn {
@@ -133,7 +130,7 @@
             }
         }
 
-        /* Extra Small Mobile Devices */
+        /* MOBILE - Small screens */
         @media (max-width: 480px) {
             .main-content {
                 margin: 15px auto;
@@ -142,12 +139,11 @@
 
             .header-image {
                 max-height: 60px;
-                object-fit: contain;
             }
 
             .clickable-image {
                 max-width: 95%;
-                max-height: 400px;
+                max-height: 500px;
             }
 
             .social-buttons {
